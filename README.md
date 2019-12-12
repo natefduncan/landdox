@@ -1,2 +1,2 @@
 # landdox
-Unofficial Landdox API in Python
+Unofficial wrapper to Landdox API in Python.
