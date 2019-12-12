@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import os
 
-from endpoints import * 
+from .endpoints import * 
 
 class Client:
     endpoints = {
