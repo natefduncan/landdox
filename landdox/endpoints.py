@@ -16,21 +16,21 @@ class Endpoint:
             return response.json()
 
     def put(self, id, data):
-        url = "/".join([self.base, self.version, self.name, id])
+        url = "/".join([self.base, self.version, self.name, str(id)])
         header = {"authorization" : "Bearer " + self.access_token}
         response = requests.put(url, data={"data" : data}, headers=header)
         safe_response = self.handle_error(response)
         return safe_response
     
     def get(self, id):
-        url = "/".join([self.base, self.version, self.name, id])
+        url = "/".join([self.base, self.version, self.name, str(id)])
         header = {"authorization" : "Bearer " + self.access_token}
         response = requests.get(url, headers=header)
         safe_response = self.handle_error(response)
         return safe_response
 
     def delete(self, id):
-        url = "/".join([self.base, self.version, self.name, id])
+        url = "/".join([self.base, self.version, self.name, str(id)])
         header = {"authorization" : "Bearer " + self.access_token}
         response = requests.delete(url, headers=header)
         safe_response = self.handle_error(response)
@@ -122,7 +122,7 @@ class tracts(Endpoint):
                 raise ValueError("List type must be either ownerships or interests.")
 
             else:
-                url += "/".join([self.id, self.list_type])
+                url += "/".join([str(id), str(list_type)])
 
         header = {"authorization" : "Bearer " + self.access_token}
         response = requests.get(url, headers=header)
