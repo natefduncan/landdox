@@ -1,5 +1,5 @@
 # Landdox
-Basic, unofficial wrapper to Landdox API in Python.
+Basic wrapper of Landdox API in Python.
 
 ## API Documentation
 https://api.landdox.com/documentation#section/Welcome-to-Landdox-API
