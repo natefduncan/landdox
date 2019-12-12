@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name = 'landdox',
-    packages = [],
+    packages = ['landdox'],
     version = '1.0',  # 
     description = 'Simple wrapper around LandDox API',
     author = 'Nathan Duncan',
