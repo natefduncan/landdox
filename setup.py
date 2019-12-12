@@ -3,12 +3,12 @@ from distutils.core import setup
 setup(
     name = 'landdox',
     packages = ['landdox'],
-    version = '1.0',  # 
+    version = '1.1',  # 
     description = 'Simple wrapper around LandDox API',
     author = 'Nathan Duncan',
     author_email = 'nduncan@fifthpartners.com',
     url = 'https://github.com/natefduncan/landdox',
-    download_url = 'https://github.com/natefduncan/landdox/archive/1.0.tar.gz',
+    download_url = 'https://github.com/natefduncan/landdox/archive/1.1.tar.gz',
     keywords = ['landdox', 'oil'],
     install_requires=['requests', 'pandas'],
     classifiers = [
