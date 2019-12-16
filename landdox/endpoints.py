@@ -123,7 +123,8 @@ class tracts(Endpoint):
 
             else:
                 url += "/".join([str(id), str(list_type)])
-
+        
+        url += "?page[size]={page_size}&page[number]={page_number}".format(page_size=page_size, page_number=page_number)
         header = {"authorization" : "Bearer " + self.access_token}
         response = requests.get(url, headers=header)
         safe_response = self.handle_error(response)
